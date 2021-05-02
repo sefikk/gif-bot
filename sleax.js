@@ -53,44 +53,42 @@ client.on("message", async message => {
 })
 
 client.on("emojiCreate", async emoji => {
-    const kanal = client.channels.cache.get(emojiLog_ChannelID)
-
-    if (!kanal) return;
     const entry = await emoji.guild.fetchAuditLogs({ limit: 1, type: 'EMOJI_CREATE' }).then(x => x.entries.first());
-    const embeds = new MessageEmbed()
+    const kanal = emojiLog_ChannelID;
+
+    const embed = new MessageEmbed()
         .setDescription(`[Emoji Linki İçin Tıkla](${emoji.url})`)
         .setImage(emoji.url)
         .setColor("GREEN")
         .setFooter(`© ${entry.executor.id}`)
-    kanal.send(embeds)
+    client.channels.cache.get(kanal).send(embed)
 })
 
 client.on("guildUpdate", async (oldGuild, newGuild) => {
-    const kanal = client.channels.cache.get(svPPLog_ChannelID)
-
     if (oldGuild.iconURL() === newGuild.iconURL()) return;
 
-    if (!kanal) return;
     const entry = await newGuild.fetchAuditLogs({ limit: 1, type: 'GUILD_UPDATE' }).then(x => x.entries.first());
-    const embeds = new MessageEmbed()
+    const kanal = svPPLog_ChannelID;
+
+    const embed = new MessageEmbed()
         .setDescription(`[Fotoğraf Linki İçin Tıkla](${newGuild.iconURL({ format: "png", dynamic: true })})`)
         .setImage(newGuild.iconURL({ format: "png", dynamic: true }))
         .setColor("GREEN")
         .setFooter(`© ${entry.executor.id}`)
-    kanal.send(embeds)
+    client.channels.cache.get(kanal).send(embed)
 })
 
 client.on("userUpdate", async (oldUser, newUser) => {
-    const kanal = client.channels.cache.get(ppLog_ChannelID)
-
     if (oldUser.avatarURL() === newUser.avatarURL()) return;
 
-    const embeds = new MessageEmbed()
+    const kanal = ppLog_ChannelID;
+
+    const embed = new MessageEmbed()
         .setDescription(`[PP Linki İçin Tıkla](${newUser.avatarURL({ dynamic: true })})`)
         .setImage(newUser.avatarURL({ dynamic: true }))
         .setColor("GREEN")
         .setFooter(`© ${newUser.id}`)
-    kanal.send(embeds)
+    client.channels.cache.get(kanal).send(embed)
 })
 
 client.on("message", message => {
