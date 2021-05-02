@@ -1,5 +1,5 @@
 echo off
-title Leax
+title Gif Bot
 color c
 cls
 :a
