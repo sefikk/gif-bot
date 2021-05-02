@@ -1,6 +1,6 @@
 # SL34ING Gif Bot
 
-## Bildiğiniz gibi discord üzerinde gif sunucuları bulunmakta ve bu gif sunucularına özel bir bot oluyor ben bu botu yaptım ve sizin için paylaşıyorum.
+## Bildiğiniz gibi discord üzerinde bir çok gif sunucusu bulunuyor ve bu gif sunucularına özel bir bot bulunmakta, yaptım ve sizin için paylaştım umarım işinizi görür iyi kullanımlar.
 
 ## Kullanımı:
 ### 1 - Src klasörünün içindeki config.json ve settings.json'u doldurun.
