@@ -1,8 +1,8 @@
 const { Client, MessageEmbed } = require("discord.js");
 const client = new Client();
 const { botToken, botPrefix } = require("./src/config.json");
-const database = require("orio.db");
 const { ppLog_ChannelID, emojiLog_ChannelID, svPPLog_ChannelID, logChannelID } = require("./src/settings.json");
+const database = require("orio.db");
 
 client.on('ready', () => {
     console.log(`
