@@ -1,0 +1,15 @@
+{
+  "name": "gif-bot",
+  "version": "0.0.1",
+  "description": "Gif sunucularında bulunan bot",
+  "main": "sleax.js",
+  "scripts": {
+    "test": "node sleax.js"
+  },
+  "author": "Sleax'ö#0001",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "orio.db": "^2.1.4"
+  }
+}
