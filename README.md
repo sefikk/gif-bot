@@ -7,4 +7,4 @@
 ### 2 - Terminali açın sadece npm i yazın ve modülleri yükleyin.
 ### 3 - Son olarak start.bat'ı açın ve botunuz artık online. 
 
-#### Satmak ve pazarlamak kesinlikle yasaktır!
+# Satmak ve pazarlamak kesinlikle yasaktır!
