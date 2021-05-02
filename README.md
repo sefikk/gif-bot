@@ -8,3 +8,5 @@
 ### 3 - Son olarak start.bat'ı açın ve botunuz artık online. 
 
 # Satmak ve pazarlamak kesinlikle yasaktır!
+
+### Kullandığım Database Modülü: [orio.db](https://www.npmjs.com/package/orio.db)
